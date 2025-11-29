@@ -1,0 +1,169 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #111827;
+}
+
+h2, h3 {
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0ea5e9;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Navbar ===== */
+nav {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+nav a {
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+nav div {
+  margin-left: auto;
+}
+
+/* ===== Buttons ===== */
+button {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0284c7;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== Inputs ===== */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 2px rgba(14,165,233,0.2);
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 16px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #f1f5f9;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f0f9ff;
+}
+
+/* ===== Badges ===== */
+.badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.badge.Approved {
+  background-color: #16a34a; /* green */
+}
+
+.badge.Rejected {
+  background-color: #dc2626; /* red */
+}
+
+.badge.Pending {
+  background-color: #0ea5e9; /* blue */
+}
+
+/* ===== Dashboard Cards / Panels ===== */
+.dashboard-panel {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.dashboard-panel h3 {
+  margin-bottom: 12px;
+}
+
+/* ===== Alerts / Error Messages ===== */
+p.error {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+/* ===== Forms Layout ===== */
+form div {
+  margin-top: 8px;
+}
+
+/* ===== Flex Helpers ===== */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

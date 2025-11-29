@@ -1,0 +1,4 @@
+body{ font-family: Inter, system-ui, Arial; margin: 0; }
+input, textarea { padding: 8px; width: 300px; }
+button { padding: 8px 12px; }
+table { border-collapse: collapse; }

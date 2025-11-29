@@ -1,0 +1,20 @@
+.badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Status-specific colors */
+.badge.Approved {
+  background-color: #16a34a; /* green */
+}
+
+.badge.Rejected {
+  background-color: #dc2626; /* red */
+}
+
+.badge.Pending {
+  background-color: #0ea5e9; /* blue */
+}
