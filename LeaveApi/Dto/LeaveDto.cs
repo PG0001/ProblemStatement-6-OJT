@@ -22,8 +22,10 @@
 
     public class UpdateLeaveStatusDto
     {
-        public string Status { get; set; } = "";
-        public string? AdminRemarks { get; set; }
+        public int AdminId { get; set; } // ID of the admin performing the action
+        public string Status { get; set; } // "Approved" or "Rejected"
+        public string? Remarks { get; set; } // optional remarks
     }
+
 
 }

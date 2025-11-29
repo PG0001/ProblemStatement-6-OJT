@@ -20,7 +20,6 @@ namespace LeaveAPI.Controllers
         // POST: api/leave/apply
         // Employees can apply for leave
         [HttpPost("apply")]
-        [Authorize(Roles = "Employee")]
         public async Task<IActionResult> Apply([FromBody] CreateLeaveRequestDto dto)
         {
             var currentUserId = int.Parse(User.FindFirst("id")?.Value ?? "0");
@@ -62,10 +61,23 @@ namespace LeaveAPI.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateStatus(int id, [FromBody] UpdateLeaveStatusDto dto)
         {
+            var currentAdminId = int.Parse(User.FindFirst("id")?.Value ?? "0");
+            dto.AdminId = currentAdminId;
+
             var result = await _service.UpdateStatus(id, dto);
             if (!result.Success) return BadRequest(new { message = result.Message });
 
             return Ok(new { message = "Leave status updated successfully" });
         }
+        [HttpPost("holiday")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ApplyHoliday([FromBody] CreateLeaveRequestDto dto)
+        {
+            var result = await _service.ApplyHolidayForAll(dto);
+            if (!result.Success) return BadRequest(new { message = result.Message });
+            return Ok(new { message = result.Message });
+        }
+
+
     }
 }

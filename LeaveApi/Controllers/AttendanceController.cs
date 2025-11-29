@@ -19,7 +19,6 @@ namespace LeaveAPI.Controllers
 
         // POST: api/attendance/mark
         [HttpPost("mark")]
-        [Authorize(Roles = "Employee")]
         public async Task<IActionResult> Mark([FromBody] MarkAttendanceDto dto)
         {
             var currentUserId = int.Parse(User.FindFirst("id")?.Value ?? "0");
